@@ -120,6 +120,7 @@ MONGO_INITDB_ROOT_PASSWORD=password
 ## 🙌 Author
 
 **Arti Semwal**
-Aspiring DevOps Engineer | Cloud & Automation Enthusiast
+Aspiring DevOps Engineer
+Cloud & Automation Enthusiast
 
 ---
