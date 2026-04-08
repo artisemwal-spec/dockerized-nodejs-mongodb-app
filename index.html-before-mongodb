@@ -1,0 +1,77 @@
+<html>
+<script>
+	function editProfile(){
+		document.querySelector('.container').style.display = 'none'
+		document.querySelector('.container-edit').style.display = 'block'
+
+		const name = document.querySelector('#name').textContent
+		document.querySelector('#input-name').value = name
+
+		const email = document.querySelector('#email').textContent
+                document.querySelector('#input-email').value = email
+
+		const interests = document.querySelector('#interests').textContent
+                document.querySelector('#input-interests').value = interests
+}
+
+
+	function saveProfile(){
+
+		document.querySelector('#name').textContent = document.querySelector('#input-name').value
+		document.querySelector('#email').textContent = document.querySelector('#input-email').value
+		document.querySelector('#interests').textContent = document.querySelector('#input-interests').value
+
+
+		document.querySelector('.container').style.display = 'block'
+		document.querySelector('.container-edit').style.display = 'none'
+
+}
+</script>
+
+ <style>
+
+.container img, .container-edit img {
+    width: 400px;
+    height: auto;
+}
+
+.container-edit {
+    display: none;
+}
+
+
+#name, #email, #interests {
+    font-weight: bold;
+}
+
+
+</style>
+
+<body>
+	<div class='container'>
+		<h1 id='header'>User Profile</h1>
+		<img src='test.jpg'/>
+		<br><br>
+		Name: <span id='name'>Arti Semwal</span>
+		<hr />
+		Email: <span id='email'>arti.semwal@example.com</span>
+		<hr />
+		Interests: <span id= 'interests'>coding</span>
+		<hr />
+		<button class='button' onclick="editProfile()">Edit Profile</button>
+	</div>
+
+	<div class='container-edit'>
+		<h1 id='header'>User Profile</h1>
+		<img src='test.jpg'/>
+		<br><br>
+		Name: <input id='input-name' type='text' />
+		<hr />
+		Email: <input id='input-email' type='email'/>
+		<hr />
+		Interests: <input id='input-interests' type='text'>
+		<hr />
+		<button class='button' onclick="saveProfile()">Save Profile</button>
+		</div>
+</body>
+</html>
