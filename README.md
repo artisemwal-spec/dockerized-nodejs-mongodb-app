@@ -10,21 +10,22 @@ The application is deployed on a cloud-based virtual machine (AWS EC2) and showc
 
 ## 🛠️ Tech Stack
 
-* **Backend:** Node.js, Express.js
-* **Database:** MongoDB
-* **Containerization:** Docker
-* **Orchestration:** Docker Compose
-* **Cloud:** AWS EC2
+* **Backend:** Node.js, Express.js  
+* **Database:** MongoDB  
+* **Containerization:** Docker  
+* **Orchestration:** Docker Compose  
+* **Cloud:** AWS EC2  
+* **Registry:** AWS ECR  
 * **Other Tools:** Mongo Express (DB UI)
 
 ---
 
 ## ⚙️ Architecture
 
-* Node.js application runs in a container
-* MongoDB runs in a separate container
-* Mongo Express provides a web UI for DB management
-* All services communicate via Docker network
+* Node.js application runs in a container  
+* MongoDB runs in a separate container  
+* Mongo Express provides a web UI for DB management  
+* All services communicate via Docker network  
 
 ---
 
@@ -51,12 +52,27 @@ js-project/
 
 ## 🚀 Features
 
-* Multi-container setup using Docker Compose
-* Persistent MongoDB database
-* Environment variable configuration
-* Web-based MongoDB admin panel (Mongo Express)
-* Cloud deployment on AWS EC2
-* Service communication using Docker networking
+* Multi-container setup using Docker Compose  
+* Persistent MongoDB database  
+* Environment variable configuration  
+* Web-based MongoDB admin panel (Mongo Express)  
+* Cloud deployment on AWS EC2  
+* Service communication using Docker networking  
+
+---
+
+## 🔄 Workflow
+
+1. Developed Node.js application  
+2. Created Dockerfile for containerization  
+3. Built Docker image locally  
+4. Pushed Docker image to AWS ECR  
+5. Pulled image on EC2 server  
+6. Used Docker Compose to run:
+   - Node.js container (from ECR)  
+   - MongoDB container (Docker Hub)  
+   - Mongo Express container  
+7. Deployed application on cloud infrastructure
 
 ---
 
